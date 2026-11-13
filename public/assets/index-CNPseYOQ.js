@@ -19,13 +19,10 @@ const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/es-CWfXW5jh.js"
     <div class="learning-bars" role="img">${e}</div>
     <div class="learning-sub"><span class="learning-done"></span> / ${Ts.length} <span ${z("COMPLETE")}</span> <span class="dot">·</span> <span class="learning-active"></span> <span ${z("IN PROGRESS")}</span></div>
   </div>`}function jl(e,t){const s=Ts.map(a=>({name:a.name,value:jm(t[a.id]),status:Nr(t[a.id])})).sort((a,r)=>r.value-a.value),n=Math.round(s.reduce((a,r)=>a+r.value,0)/s.length*100),o=e.querySelector(".learning");o.querySelectorAll(".learning-seg").forEach((a,r)=>{const i=s[r];a.classList.toggle("partial",i.value>0&&i.value<1),a.title=`${i.name}: ${Math.round(i.value*100)}%`,a.firstElementChild.style.width=`${i.value*100}%`}),o.querySelector(".learning-bars").setAttribute("aria-label",S("{pct}% complete",{pct:n})),Vt(o.querySelector(".learning-value"),`${n}%`),Vt(o.querySelector(".learning-done"),String(s.filter(a=>a.status==="done").length)),Vt(o.querySelector(".learning-active"),String(s.filter(a=>a.status==="progress").length))}function cy(){return`
-  <a class="credit" href="https://x.com/DilumSanjaya" target="_blank" rel="noopener noreferrer" data-t-title="Dilum Sanjaya on X" title="${S("Dilum Sanjaya on X")}">
+  <div class="credit" title="Zer0Trac3 (ZT)">
     <span class="credit-label" ${z("DESIGNED BY")}</span>
-    <span class="credit-name">
-      <svg class="credit-x" viewBox="0 0 24 24" width="13" height="13" aria-hidden="true"><path fill="currentColor" d="M17.75 3h3.07l-6.71 7.67L22 21h-6.18l-4.84-6.33L5.44 21H2.37l7.18-8.2L2 3h6.33l4.38 5.79L17.75 3Zm-1.08 16.18h1.7L7.4 4.73H5.58l11.09 14.45Z"/></svg>
-      DilumSanjaya
-    </span>
-  </a>`}const ll=Math.ceil(qt.length/2);function Pu(e){try{const t=qt.find(n=>n.code===Sa()).html,s=new Intl.DisplayNames([t,"en"],{type:"language",languageDisplay:"standard"}).of(e.tag??e.code);return s.charAt(0).toLocaleUpperCase(t)+s.slice(1)}catch{return""}}function dy(){const e=qt.map(t=>`<button type="button" role="menuitemradio" data-lang="${t.code}" aria-checked="${t.code===Sa()}">
+    <span class="credit-name">Zer0Trac3 (ZT)</span>
+  </div>`}const ll=Math.ceil(qt.length/2);function Pu(e){try{const t=qt.find(n=>n.code===Sa()).html,s=new Intl.DisplayNames([t,"en"],{type:"language",languageDisplay:"standard"}).of(e.tag??e.code);return s.charAt(0).toLocaleUpperCase(t)+s.slice(1)}catch{return""}}function dy(){const e=qt.map(t=>`<button type="button" role="menuitemradio" data-lang="${t.code}" aria-checked="${t.code===Sa()}">
       <span class="lang-badge" aria-hidden="true"><span class="lang-short" lang="${t.html}">${t.badge??t.short}</span>${Se.check}</span>
       <span class="lang-names"><span class="lang-native" lang="${t.html}">${t.name}</span><span class="lang-local">${M(Pu(t))}</span></span>
     </button>`).join("");return`

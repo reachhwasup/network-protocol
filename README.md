@@ -1,6 +1,6 @@
 # Protocol Explorer — local clone
 
-A self-contained mirror of https://protocol-explorer-alpha.vercel.app/ captured on November 12, 2026. Original application and branding by Dilum Sanjaya; attribution is retained.
+A self-contained mirror of https://protocol-explorer-alpha.vercel.app/ captured on November 12, 2026. Original application by Dilum Sanjaya. The displayed design credit is customized to Zer0Trac3 (ZT).
 
 ## Run
 
